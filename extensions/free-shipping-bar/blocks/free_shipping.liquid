@@ -1,0 +1,19 @@
+<div class="main-shipping-bar">
+  <free-shippingbar data-limit="25000" data-gift-product="44785453138159">
+    <div class="bar-wrapper" >
+      <div class="rangebar"></div>
+    </div>
+    <div class="text-message"> {% if cart.total_price > 10000 %} Free shipping {% else %}Your are {{ 10000 |minus: cart.total_price | money }}{% endif %} </div>
+  </free-shippingbar>
+</div>
+
+
+{% schema %}
+{
+  "name": "Free Shipping bar",
+  "target": "section",
+  "stylesheet": "freeshipping.css",
+  "javascript": "freeshipping.js"
+}
+{% endschema %}
+
